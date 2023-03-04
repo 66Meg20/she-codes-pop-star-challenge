@@ -7,15 +7,30 @@
     <title>Trigger</title>
     <style>
       body {
-        background: black;
+        background: linear-gradient(
+          109.6deg,
+          rgba(0, 0, 0, 0.93) 11.2%,
+          rgb(63, 61, 61) 78.9%
+        );
         text-align: center;
+      }
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        color: white;
+      }
+      h2 {
+        font-size: 30px;
+      }
+      hr {
+        margin-bottom: 20px;
       }
       .container {
         max-width: 1400px;
         margin: 0 auto;
       }
-      h1 {
-        text-align: center;
+      .header-paragragh {
+        color: white;
       }
 
       .video {
@@ -24,6 +39,7 @@
         display: block;
         margin: 0 auto;
         border-radius: 10px;
+        margin-bottom: 50px;
       }
       .music {
         width: 100%;
@@ -34,7 +50,7 @@
       }
       .section-head {
         padding: 50px 50px 80px 50px;
-        background: #5c5470;
+        background: #606470;
       }
 
       .section-gaku {
@@ -55,12 +71,37 @@
         margin: 0 auto;
         border-radius: 10px;
       }
+      p {
+        margin-bottom: 40px;
+        color: black;
+        font-size: 24px;
+      }
+      .button {
+        border-radius: 8px;
+        padding: 16px;
+
+        border: 1px solid black;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all ease-in-out 150ms;
+      }
+      .button:hover {
+        background-color: #393e46;
+      }
+      .popUpBtn {
+      }
+      .active {
+        display: none;
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="section-head">
         <h1>Trigger</h1>
+        <hr />
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/722/original/9e45bd7e5000653105da2a97574a99a7.jpg?1677798447"
           class="image"
@@ -74,6 +115,17 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
+        <p class="header-paragragh">
+          TRIGGER is a 3-person unit consisting of Gaku Yaotome as their leader,
+          Tenn Kujo as their center, and Ryunosuke Tsunashi.
+        </p>
+
+        <a
+          href="https://idolish7.fandom.com/wiki/TRIGGER_(Group)"
+          target="_blank"
+          class="button"
+          >click here</a
+        >
       </div>
       <div class="section-gaku">
         <h2>Gaku Yaotome</h2>
@@ -90,6 +142,41 @@
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
+        <p>
+          Gaku Yaotome (八乙女楽やおとめがく) is rough-spoken and has a fairly
+          intimidating aura about him, so there are a lot of rumors swirling
+          around about how nasty the president of Yaotome Pro’s son must be. For
+          his fans, he’s the sexy guy they want to embrace them the most.
+        </p>
+        <p>
+          “ Erase all the noise around you. Listen for your own voice. Instead
+          of striving to become someone who’ll be loved by a hundred people,
+          become someone you’ll love yourself. That’s what it’s like to put your
+          all into being yourself. ” —Gaku Yaotome , Part 2 - Chapter 9.3 What
+          Lies in our Hearts
+        </p>
+
+        <div>
+          <iframe
+            id="popUp"
+            class="active"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/bx6Ajs6onoM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <a
+          href="https://idolish7.fandom.com/wiki/Gaku_Yaotome"
+          class="button"
+          target="_blank"
+          >click here</a
+        >
+        <button id="remove" class="popUPBtn">click here</button>
       </div>
       <div class="section-tenn">
         <h2>Tenn Kujo</h2>
@@ -106,6 +193,25 @@
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
+        <p>
+          Tenn Kujo (九条天くじょうてん), the people’s angel who thinks only of
+          his fans. His sweet, innocent demeanor on stage and perfection in just
+          about everything he does endears him to his fans, and Tenn’s existence
+          itself was considered something of a “secret weapon” during TRIGGER’s
+          formation and early days. Tenn was even called by fans and co-workers
+          "Embodiment of Perfection".
+        </p>
+        <p>
+          “ Even when the whole world is despairing, it is our job to sing, to
+          smile. ” —Tenn Kujo
+        </p>
+
+        <a
+          href="https://idolish7.fandom.com/wiki/Tenn_Kujo"
+          target="_blank"
+          class="button"
+          >click here</a
+        >
       </div>
       <div class="section-ryunoskue">
         <h2>Ryunosuke Tsunashi</h2>
@@ -122,7 +228,34 @@
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
           loading="lazy"
         ></iframe>
+        <p>
+          Ryunosuke Tsunashi (十龍之介つなしりゅのすけ), is actually a very shy
+          and timid soul, who has a difficult time talking with women due to
+          growing up with his brothers. There's also a good argument for
+          Ryunosuke's naivete, if his comments to the woman at his father's
+          hotel are any indication.
+        </p>
+        <p>
+          “ If you come to understand each other, bit by bit… You’ll become the
+          best team. We were like that too. ” —Ryunosuke Tsunashi
+        </p>
+
+        <a
+          href="https://idolish7.fandom.com/wiki/Ryunosuke_Tsunashi"
+          target="_blank"
+          class="button"
+        >
+          click here</a
+        >
       </div>
     </div>
   </body>
+  <script>
+    let popUP = document.querySelector("#popUP");
+    let popUpBtn = document.querySelector("#remove");
+
+    popUpBtn.addEventListener("click", () => {
+      popUp.classList.remove("active");
+    });
+  </script>
 </html>
