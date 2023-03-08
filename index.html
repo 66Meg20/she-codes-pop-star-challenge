@@ -16,11 +16,11 @@
       }
       h1 {
         text-align: center;
-        font-size: 50px;
+        font-size: 60px;
         color: white;
       }
       h2 {
-        font-size: 30px;
+        font-size: 40px;
       }
       hr {
         margin-bottom: 20px;
@@ -40,6 +40,10 @@
         margin: 0 auto;
         border-radius: 10px;
         margin-bottom: 50px;
+        transition: all 150ms ease-in-out;
+      }
+      .video:hover {
+        transform: scale(1.5);
       }
       .music {
         width: 100%;
@@ -101,10 +105,6 @@
       }
       .hidden-video:hover {
         transform: scale(1.5);
-      }
-
-      .tenn-active {
-        display: none;
       }
     </style>
   </head>
@@ -226,7 +226,7 @@
         <div>
           <iframe
             id="tennVideo"
-            class="tenn-active hidden-video"
+            class="active hidden-video"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/lkgq0IrpT08"
@@ -276,6 +276,8 @@
         >
         <div>
           <iframe
+            id="ryunosukeVideo"
+            class="active hidden-video"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/ig432ABwwoA"
@@ -286,7 +288,7 @@
           ></iframe>
         </div>
 
-        <button class="popUPBtn button">Watch a clip</button>
+        <button id="hideVideo3" class="popUPBtn button">Watch a clip</button>
       </div>
     </div>
   </body>
@@ -301,7 +303,13 @@
     let secondPopUpBtn = document.querySelector("#hideVideo");
 
     secondPopUpBtn.addEventListener("click", () => {
-      secondPopUp.classList.toggle("tenn-active");
+      secondPopUp.classList.toggle("active");
+    });
+    let thirdPopUp = document.querySelector("#ryunosukeVideo");
+    let thirdPopUpBtn = document.querySelector("#hideVideo3");
+
+    thirdPopUpBtn.addEventListener("click", () => {
+      thirdPopUp.classList.toggle("active");
     });
   </script>
 </html>
