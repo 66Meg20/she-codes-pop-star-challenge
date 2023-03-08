@@ -96,13 +96,15 @@
       }
 
       .hidden-video {
+        margin: 25px;
         transition: all 150ms ease-in-out;
       }
       .hidden-video:hover {
         transform: scale(1.5);
       }
-      #popUp {
-        margin: 25px;
+
+      .tenn-active {
+        display: none;
       }
     </style>
   </head>
@@ -168,7 +170,7 @@
           href="https://idolish7.fandom.com/wiki/Gaku_Yaotome"
           class="button"
           target="_blank"
-          >click here</a
+          >learn more</a
         >
 
         <div>
@@ -221,7 +223,23 @@
           class="button"
           >learn more</a
         >
+        <div>
+          <iframe
+            id="tennVideo"
+            class="tenn-active hidden-video"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/lkgq0IrpT08"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <button id="hideVideo" class="popUPBtn button">Watch a clip</button>
       </div>
+
       <div class="section-ryunoskue">
         <h2>Ryunosuke Tsunashi</h2>
         <img
@@ -254,8 +272,21 @@
           target="_blank"
           class="button"
         >
-          click here</a
+          learn more</a
         >
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/ig432ABwwoA"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <button class="popUPBtn button">Watch a clip</button>
       </div>
     </div>
   </body>
@@ -265,6 +296,12 @@
 
     popUpBtn.addEventListener("click", () => {
       popUp.classList.toggle("active");
+    });
+    let secondPopUp = document.querySelector("#tennVideo");
+    let secondPopUpBtn = document.querySelector("#hideVideo");
+
+    secondPopUpBtn.addEventListener("click", () => {
+      secondPopUp.classList.toggle("tenn-active");
     });
   </script>
 </html>
