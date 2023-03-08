@@ -79,7 +79,7 @@
       .button {
         border-radius: 8px;
         padding: 16px;
-
+        margin: 25px;
         border: 1px solid black;
         background-color: black;
         color: white;
@@ -90,10 +90,19 @@
       .button:hover {
         background-color: #393e46;
       }
-      .popUpBtn {
-      }
+
       .active {
         display: none;
+      }
+
+      .hidden-video {
+        transition: all 150ms ease-in-out;
+      }
+      .hidden-video:hover {
+        transform: scale(1.5);
+      }
+      #popUp {
+        margin: 25px;
       }
     </style>
   </head>
@@ -155,11 +164,17 @@
           all into being yourself. ” —Gaku Yaotome , Part 2 - Chapter 9.3 What
           Lies in our Hearts
         </p>
+        <a
+          href="https://idolish7.fandom.com/wiki/Gaku_Yaotome"
+          class="button"
+          target="_blank"
+          >click here</a
+        >
 
         <div>
           <iframe
             id="popUp"
-            class="active"
+            class="active hidden-video"
             width="560"
             height="315"
             src="https://www.youtube.com/embed/bx6Ajs6onoM"
@@ -170,13 +185,7 @@
           ></iframe>
         </div>
 
-        <a
-          href="https://idolish7.fandom.com/wiki/Gaku_Yaotome"
-          class="button"
-          target="_blank"
-          >click here</a
-        >
-        <button id="remove" class="popUPBtn">click here</button>
+        <button id="remove" class="popUPBtn button">Watch a clip</button>
       </div>
       <div class="section-tenn">
         <h2>Tenn Kujo</h2>
@@ -210,7 +219,7 @@
           href="https://idolish7.fandom.com/wiki/Tenn_Kujo"
           target="_blank"
           class="button"
-          >click here</a
+          >learn more</a
         >
       </div>
       <div class="section-ryunoskue">
@@ -255,7 +264,7 @@
     let popUpBtn = document.querySelector("#remove");
 
     popUpBtn.addEventListener("click", () => {
-      popUp.classList.remove("active");
+      popUp.classList.toggle("active");
     });
   </script>
 </html>
