@@ -8,10 +8,16 @@
     <style>
       body {
         background: linear-gradient(
-          109.6deg,
-          rgba(0, 0, 0, 0.93) 11.2%,
-          rgb(63, 61, 61) 78.9%
-        );
+            to bottom,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(0, 0, 0, 0.15) 100%
+          ),
+          radial-gradient(
+              at top center,
+              rgba(255, 255, 255, 0.4) 0%,
+              rgba(0, 0, 0, 0.4) 120%
+            )
+            #989898;
         text-align: center;
       }
       h1 {
@@ -65,7 +71,7 @@
         padding: 80px 50px;
         background: #ffedff;
       }
-      .section-ryunoskue {
+      .section-ryunosuke {
         padding: 80px 50px;
         background: #0092ca;
       }
@@ -108,12 +114,23 @@
       .hidden-video:hover {
         transform: scale(1.5);
       }
+      @media (max-width: 900px) {
+        h1 {
+          font-size: 35px;
+        }
+        h2 {
+          font-size: 28px;
+        }
+        body {
+          font-size: 15px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <div class="section-head">
-        <h1>Trigger</h1>
+        <h1>TRIGGER</h1>
         <hr />
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/722/original/9e45bd7e5000653105da2a97574a99a7.jpg?1677798447"
@@ -137,7 +154,7 @@
           href="https://idolish7.fandom.com/wiki/TRIGGER_(Group)"
           target="_blank"
           class="button"
-          >click here</a
+          >learn more</a
         >
       </div>
       <div class="section-gaku">
@@ -238,7 +255,7 @@
         <button id="hideVideo" class="popUPBtn button">Watch a clip</button>
       </div>
 
-      <div class="section-ryunoskue">
+      <div class="section-ryunosuke">
         <h2>Ryunosuke Tsunashi</h2>
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/719/original/c2b2aa85e4de6803b2935ea7fb01d350.jpg?1677798398"
